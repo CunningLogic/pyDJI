@@ -27,7 +27,7 @@ def write(packet):
 def main():
 	if len(sys.argv) == 2:
 		if connect(sys.argv[1]):
-			write(duml.Reboot(0x21,0x0b))
+			write(duml.reboot(0x21,0x0b))
 		else:
 			print('Failed to connect to ' + sys.argv[1])
 

@@ -15,12 +15,17 @@ def getSeqNo():
 	return seqno
 
 
-def getVersion(src, dst):
+def ping(src, dst):
+	#return build(source=0x2a, destination=0x28, cmdType=0x40, cmdSet=0x00, cmdID=0x01, payload=None)
+	return build(source=src, destination=dst, cmdType=0x40, cmdSet=0x00, cmdID=0x00, payload=None)
+
+
+def getversion(src, dst):
 	#return build(source=0x2a, destination=0x28, cmdType=0x40, cmdSet=0x00, cmdID=0x01, payload=None)
 	return build(source=src, destination=dst, cmdType=0x40, cmdSet=0x00, cmdID=0x01, payload=None)
 
 
-def Reboot(src, dst):
+def reboot(src, dst):
 	#return build(source=0x2a, destination=0x0b, cmdType=0x40, cmdSet=0x00, cmdID=0x0b, payload=None)
 	return build(source=src, destination=dst, cmdType=0x40, cmdSet=0x00, cmdID=0x0b, payload=None)
 
